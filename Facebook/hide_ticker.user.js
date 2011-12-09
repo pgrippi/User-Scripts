@@ -9,12 +9,14 @@
 (function (window) {
   "use strict";
 
-  var ticker_sidebar = document.getElementById('pagelet_rhc_ticker'),
-    ticker_chatbar = document.getElementById('pagelet_ticker');
-  if (ticker_sidebar !== null) {
-    ticker_sidebar.style.display = 'none';
-  }
+  var ticker_chatbar = document.getElementById('pagelet_ticker'), style;
+
   if (ticker_chatbar !== null) {
     ticker_chatbar.style.display = 'none';
   }
+
+  style = document.createElement('style');
+  style.type = 'text/css';
+  style.textContent = '.fbFeedTicker { display: none !important; }';
+  document.getElementsByTagName('head')[0].appendChild(style);
 }(window));
