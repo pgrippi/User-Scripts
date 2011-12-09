@@ -13,4 +13,4 @@
   if (ticker !== null) {
     ticker.style.display = 'none';
   }
-}());
+}(window));
