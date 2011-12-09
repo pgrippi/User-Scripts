@@ -9,8 +9,12 @@
 (function (window) {
   "use strict";
 
-  var ticker = document.getElementById('pagelet_rhc_ticker');
-  if (ticker !== null) {
-    ticker.style.display = 'none';
+  var ticker_sidebar = document.getElementById('pagelet_rhc_ticker'),
+    ticker_chatbar = document.getElementById('pagelet_ticker');
+  if (ticker_sidebar !== null) {
+    ticker_sidebar.style.display = 'none';
+  }
+  if (ticker_chatbar !== null) {
+    ticker_chatbar.style.display = 'none';
   }
 }(window));
