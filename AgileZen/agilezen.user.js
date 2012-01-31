@@ -86,6 +86,15 @@
       });
     }
 
+    function bindCommentCommit() {
+      $('[name="story-comment-text"]').keypress(function(event) {
+        var code = (event.keyCode ? event.keyCode : event.which);
+        if(code == 13 && true == event.shiftKey) {
+          this.closest("form").submit();
+        }
+      });
+    }
+
     $(window).on('resize', relocate);
     relocate();
 
@@ -102,5 +111,6 @@
 
     container.css({ 'top': (container.outerHeight() * -1) + 'px' }).show().animate({ 'top': 0 }, 600);
     bindTimer();
+    bindCommentCommit();
   });
 }(this));
