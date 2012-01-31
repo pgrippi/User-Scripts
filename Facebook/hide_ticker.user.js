@@ -9,8 +9,14 @@
 (function (window) {
   "use strict";
 
-  var ticker = document.getElementById('pagelet_rhc_ticker');
-  if (ticker !== null) {
-    ticker.style.display = 'none';
+  var ticker_chatbar = document.getElementById('pagelet_ticker'), style;
+
+  if (ticker_chatbar !== null) {
+    ticker_chatbar.style.display = 'none';
   }
-}());
+
+  style = document.createElement('style');
+  style.type = 'text/css';
+  style.textContent = '.fbFeedTicker { display: none !important; }';
+  document.getElementsByTagName('head')[0].appendChild(style);
+}(window));
