@@ -87,11 +87,13 @@
     }
 
     function bindCommentCommit() {
-      $('[name="story-comment-text"]').keypress(function(event) {
-        var code = (event.keyCode ? event.keyCode : event.which);
-        if(code == 13 && true == event.shiftKey) {
-          this.closest("form").submit();
+      $('textarea[name="story-comment-text"]').keydown(function (event) {
+        var code = event.which;
+        if (code === 13 && true === event.shiftKey) {
+          $(this).parent().find('button[type="submit"]').click();
+          return false;
         }
+        return true;
       });
     }
 
