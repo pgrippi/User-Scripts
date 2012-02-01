@@ -87,7 +87,7 @@
     }
 
     function bindCommentCommit() {
-      $(document).on('keydown', 'textarea[name="story-comment-text"]', function (event) {
+      $(document).on('keydown', 'textarea[name="story-comment-text"],textarea[name="reason"]', function (event) {
         var code = event.which;
         if (code === 13 && event.shiftKey === true) {
           $(this).parent().find('button[type="submit"]').click();
