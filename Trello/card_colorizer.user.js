@@ -2,8 +2,8 @@
 // @name Trello Card Colorizer
 // @namespace http://petergrippi.com/
 // @description adds color to cards
-// @match https://trello.com/board/*
-// @version 1.1
+// @include https://trello.com/board/*
+// @version 1.1.1
 // ==/UserScript==
 (function () {
   "use strict";
