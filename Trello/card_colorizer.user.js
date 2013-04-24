@@ -3,7 +3,7 @@
 // @namespace http://petergrippi.com/
 // @description adds color to cards
 // @include https://trello.com/board/*
-// @version 1.1.2
+// @version 1.1.2.1
 // ==/UserScript==
 (function () {
   "use strict";
@@ -40,7 +40,7 @@
     var colorizer = function() {
       $('.card-label').each(function(){
         var $this = $(this), data = $this.data();
-        if (!data.colorized || data.colorized_color != $this.css('background-color')) {
+        if (!data.colorized || data.colorized_color !== $this.css('background-color')) {
           $this.closest('.list-card').css('background-color', $this.css('background-color'));
           $this.data({
             'colorized'       : true,
